@@ -1,14 +1,10 @@
-#
-# publish dop.tcl to lib/
-publish: 
-	cp lib/dop.tcl ../lib/dop.tcl
+MODULES  := dcm dvc dfa dqr
 
-# concat tcl script to lib/dop.tcl
-merge:
-	bin/genlib.tcl -cfg genlib.cfg -o lib/dop.tcl 
+all: $(MODULES)
 
-# split dop.tcl to individual tcl file
-split:
-	bin/split.tcl lib/dop.tcl
+$(MODULES):
+	@echo "## Cloning Module $@ ....."
+	git clone https://github.com/icdop/$@.git
 
-
+update:
+	
