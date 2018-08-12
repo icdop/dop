@@ -1,4 +1,8 @@
-.KEEP_STATE
+EMAIL    := hungchun.li@yahoo.com
+USER     := "icdop"
 
-PACKAGE = dvc dqi dcm dfa
+config:
+	git config --global user.email $(EMAIL)
+	git config --global user.name  $(USER)
+
 
