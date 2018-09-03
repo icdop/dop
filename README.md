@@ -2,16 +2,17 @@
 Design Operation Platform (dop) is the root projejct of IC Design Management Framework.
 
 It is composed of the followng modules:
-* dkm - Design Kit Management
-* dvc - Design Version Control
-* dfa - Design Flow Automation
-* dqr - Design Quality Review
+
+	* dkm - Design Kit Management
+	* dvc - Design Version Control
+	* dfa - Design Flow Automation
+	* dqr - Design Quality Review
 
 ## Project Accont Management
 
 1) Project Code Naming Rule
 
-	Format : Pffppp###r
+	Format : Pffpppcccr
 
 	* ff - foundry code
 	
@@ -57,7 +58,7 @@ It is composed of the followng modules:
 			C00: 5nm
 			D00: 3nm
 
-	* ### - project count
+	* ccc - project count
 	
 			T01: CAD team testchip project
 			I01: internal IP develeopment project
@@ -72,15 +73,15 @@ It is composed of the followng modules:
 
 2) Project Unix Environment Setup 
 
-	Example : 
-	Project code : P1073C01A 
+	Example :
+	Project code - P1073C01A 
 
 	- Project Unix Group
 	
-		- p1073c01d : Design Data Management Group
 		- p1073c01a : PM/AE Group 
 		- p1073c01b : Backend Group (APR)
 		- p1073c01c : CAD Group (Library/Design Kit/EDA Tool)
+		- -1073c01d : Design Data Manage Group
 		- p1073c01e : IP Group
 		- p1073c01f : Frontend Group (RTL Coding, Synthesis, Simulation, DFT)
 		- p1073c01m : Memory Group (Memory Compiler)
@@ -105,11 +106,8 @@ It is composed of the followng modules:
 		Directory				  ower
 		-------------------------------		----------
 		/projects/p1073c01/design/		: p1073c01
-
-
 		/projects/p1073c01/techlib/		: p1073c01c0
 		/projects/p1073c01/flow/		: p1073c01c0
-	
 		/projects/p1073c01/user/pm0/		: p1073c01a0
 		/projects/p1073c01/user/be0/		: p1073c01b0
 		/projects/p1073c01/user/be1/		: p1073c01b1
@@ -120,8 +118,6 @@ It is composed of the followng modules:
 		/projects/p1073c01/user/cad/		: p1073c01c0
 		/projects/p1073c01/user/mem/		: p1073c01m0
  
-
-
 3) Project Account Management
 
 	1. Separate regualr user account and project account
