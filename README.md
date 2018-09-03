@@ -1,4 +1,4 @@
-# dop - main framework
+# DOP - main framework
 Design Operation Platform (dop) is the root projejct of IC Design Management Framework.
 
 It is composed of the followng modules:
@@ -70,7 +70,7 @@ It is composed of the followng modules:
 			C - eco2 
 
 
-## Project Accont Management
+## Project Accont Naming Rule
 
 	Example :
 	Project code - P1073C01A 
@@ -80,7 +80,7 @@ It is composed of the followng modules:
 		- p1073c01a : PM/AE Group 
 		- p1073c01b : Backend Group (APR)
 		- p1073c01c : CAD Group (Library/Design Kit/EDA Tool)
-		- -1073c01d : Design Data Manage Group
+		- p1073c01d : Design Data Manage Group
 		- p1073c01e : IP Group
 		- p1073c01f : Frontend Group (RTL Coding, Synthesis, Simulation, DFT)
 		- p1073c01m : Memory Group (Memory Compiler)
@@ -101,7 +101,7 @@ It is composed of the followng modules:
 			- p1073c01e2 : GPIO RD
 
 
-## Project Unix Environment Setup 
+## Project Unix Environment
 
 	- Project Working Directory
 	
@@ -118,7 +118,7 @@ It is composed of the followng modules:
 		/projects/p1073c01/user/cad/		: p1073c01c0
 		/projects/p1073c01/user/mem/		: p1073c01m0
  
-3) Project Account Management
+## Project Account Management
 
 	1. Separate regualr user account and project account
 		regular account - albertli
@@ -141,7 +141,7 @@ It is composed of the followng modules:
 		* all unix job actions should be recorded into tracking database
 		* machine resource and tool license usage should be recorded  
 		
-4) Data Management Rule
+## Data Management Rule
 
 	1) Only CAD engineer can install the library file into techlib/
 	2) Design data can only be checkin to central database pool with formal DVC command 
