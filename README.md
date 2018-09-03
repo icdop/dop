@@ -8,9 +8,8 @@ It is composed of the followng modules:
 	* dfa - Design Flow Automation
 	* dqr - Design Quality Review
 
-## Project Accont Management
 
-1) Project Code Naming Rule
+## Project Code Naming Rule
 
 	Format : Pffpppcccr
 
@@ -71,7 +70,7 @@ It is composed of the followng modules:
 			C - eco2 
 
 
-2) Project Unix Environment Setup 
+## Project Accont Management
 
 	Example :
 	Project code - P1073C01A 
@@ -101,10 +100,11 @@ It is composed of the followng modules:
 			- p1073c01e1 : DDR IP RD
 			- p1073c01e2 : GPIO RD
 
+
+## Project Unix Environment Setup 
+
 	- Project Working Directory
 	
-		Directory				  ower
-		-------------------------------		----------
 		/projects/p1073c01/design/		: p1073c01
 		/projects/p1073c01/techlib/		: p1073c01c0
 		/projects/p1073c01/flow/		: p1073c01c0
