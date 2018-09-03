@@ -11,9 +11,10 @@ It is composed of the followng modules:
 
 1) Project Code Naming Rule
 
-	Format : P<ff><ppp><###><r>
+	Format : Pffppp###r
 
 	* ff - foundry code
+	
 			10: TSMC
 			11: UMC
 			12: SMIC
@@ -21,6 +22,7 @@ It is composed of the followng modules:
 			14: Global Foundries
 
 	* pp - process node
+	
 			10: 0.500um	500nm
 			20: 0.350um	250nm
 			30: 0.180um	180nm
@@ -56,11 +58,13 @@ It is composed of the followng modules:
 			D00: 3nm
 
 	* ### - project count
+	
 			T01: CAD team testchip project
 			I01: internal IP develeopment project
 			C01: customer project
 
 	* r   - revision
+	
 			A - rev0
 			B - eco1
 			C - eco2 
@@ -72,6 +76,7 @@ It is composed of the followng modules:
 	Project code : P1073C01A 
 
 	- Project Unix Group
+	
 		- p1073c01d : Design Data Management Group
 		- p1073c01a : PM/AE Group 
 		- p1073c01b : Backend Group (APR)
@@ -81,6 +86,7 @@ It is composed of the followng modules:
 		- p1073c01m : Memory Group (Memory Compiler)
 
 	- Project Unix Account
+	
 		- p1073c01a : Project Data Management Account
 		- p1073c01a0 : Project Leader
 		- p1073c01c0 : CAD/Design Kit Engineer
@@ -95,6 +101,7 @@ It is composed of the followng modules:
 			- p1073c01e2 : GPIO RD
 
 	- Project Working Directory
+	
 		Directory				  ower
 		-------------------------------		----------
 		/projects/p1073c01/design/		: p1073c01
