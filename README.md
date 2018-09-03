@@ -11,109 +11,107 @@ It is composed of the followng modules:
 
 1) Project Code Naming Rule
 
-	Format : P<f><ppp><###><r>
+	Format : P<ff><ppp><###><r>
 
-	* abc - process code
-		a - foundry code
-			1: TSMC
-			2: Samsung
-			3: Global Foundries
-			4: UMC
-			5: SMIC
+	* ff - foundry code
+			10: TSMC
+			11: UMC
+			12: SMIC
+			13: Samsun
+			14: Global Foundries
 
-		ppp - process node (major)
-			010: 0.50um	500nm
-			020: 0.350um	250nm
-			030: 0.180um	180nm
-			040: 90nm/80nm
-			050: 65nm/55nm
-				051 -	65G
-				052 -	65LP
-				151 -	55LP
+	* pp - process node
+			10: 0.500um	500nm
+			20: 0.350um	250nm
+			30: 0.180um	180nm
+			40: 90nm/80nm
+			50: 65nm/55nm
+				51 -	65G
+				52 -	65LP
+				53 -	55LP
 
-			060: 45nm/40nm
-				061 -	45G
-				162 -	40G
-				162 -	40LP
-				163 -	40ULP
-			070: 28nm
-				071 -	28LP
-				072 -	28HP
-				073 -	28HPM
-				074 -	28HPC
-				075 -	28ULP
-			080: 20nm
-				081 -	20FF
-			090: 16nm
-				091 -	16FF+
-				092 -	16FFC
-				191 -	12FFC
-			0A0: 10nm
-				0A1 -	10FF
-			0B0: 7nm
-				0B1 -	7FF
-			0C0: 5nm
-			0D0: 3nm
+			60: 45nm/40nm
+				61 -	45G
+				62 -	40G
+				63 -	40LP
+				64 -	40ULP
+			70: 32nm/28nm
+				71 -	28LP
+				72 -	28HP
+				73 -	28HPL
+				74 -	28HPM
+				75 -	28HPC
+				76 -	28ULP
+			80: 20nm
+				81 -	20FF
+			90: 16nm
+				91 -	16FF+
+				92 -	16FFC
+				93 -	12FFC
+			A0: 10nm
+				A1 -	10FF
+			B0: 7nm
+				B1 -	7FF
+			C00: 5nm
+			D00: 3nm
 
 	* ### - project count
 			T01: CAD team testchip project
 			I01: internal IP develeopment project
-			001: customer project
+			C01: customer project
 
 	* r   - revision
-			a - rev0
-			b - eco1
-			c - eco2 
+			A - rev0
+			B - eco1
+			C - eco2 
 
 
 2) Project Unix Environment Setup 
 
 	Example : 
-	Project code p1073001a 
+	Project code : P1073C01A 
 
 	- Project Unix Group
-		- p1073001a  : Project Data Management Group
-		- p1073001aa : PM/AE Group 
-		- p1073001ab : Backend Group (APR)
-		- p1073001ac : CAD Group (Library/Design Kit/EDA Tool)
-		- p1073001ad : DFT Group
-		- p1073001ae : IP Group
-		- p1073001af : Frontend Group (RTL Coding, Synthesis, Simulation)
-		- p1073001am : Memory Group (Memory Compiler)
+		- p1073c01d : Design Data Management Group
+		- p1073c01a : PM/AE Group 
+		- p1073c01b : Backend Group (APR)
+		- p1073c01c : CAD Group (Library/Design Kit/EDA Tool)
+		- p1073c01e : IP Group
+		- p1073c01f : Frontend Group (RTL Coding, Synthesis, Simulation, DFT)
+		- p1073c01m : Memory Group (Memory Compiler)
 
 	- Project Unix Account
-		- p107300aa : Project Data Management Account
-		- p1073001aa0 : Project Leader
-		- p1073001ac0 : CAD/Design Kit Engineer
-		- p1073001ab0 : Backend Leader/Full chip integration
-			- p1073001ab1 : block APR owner 1
-			- p1073001ab2 : block APR owner 2
-		- p1073001ad0 : DFT Leader/Full chip DFT
-			- p1073001d1  : block DFT owner 1
-		- p1073001af0 : Frondend Leader
-			- p1073001af1 : block RTL owern 1 
-		- p1073001ae0 : IP Dev Lead
-			- p1073001ae1 : DDR IP RD
-			- p1073001ae2 : GPIO RD
+		- p1073c01a : Project Data Management Account
+		- p1073c01a0 : Project Leader
+		- p1073c01c0 : CAD/Design Kit Engineer
+		- p1073c01b0 : Backend Leader/Full chip integration
+			- p1073c01b1 : block APR owner 1
+			- p1073c01b2 : block APR owner 2
+		- p1073c01f0 : Frondend Leader
+			- p1073c01f1 : block RTL owern 1 
+			- p1073c01f2 : DFT owner
+		- p1073c01e0 : IP Dev Lead
+			- p1073c01e1 : DDR IP RD
+			- p1073c01e2 : GPIO RD
 
 	- Project Working Directory
 		Directory				  ower
 		-------------------------------		----------
-		/projects/p1073001a/techlib/		: p1073001aa
-		/projects/p1073001a/design/		: p1073001aa
+		/projects/p1073c01/design/		: p1073c01
 
-		/projects/p1073001a/flow/		: p1073001ac0
+
+		/projects/p1073c01/techlib/		: p1073c01c0
+		/projects/p1073c01/flow/		: p1073c01c0
 	
-		/projects/p1073001a/user/pm0/		: p1073001aa0
-		/projects/p1073001a/user/be0/		: p1073001ab0
-		/projects/p1073001a/user/be1/		: p1073001ab1
-		/projects/p1073001a/user/fe0/		: p1073001af0
-		/projects/p1073001a/user/fe1/
-		/projects/p1073001a/user/ip0/		: p1073001ae0
-		/projects/p1073001a/user/ip1/
-		/projects/p1073001a/user/cad/		: p1073001ac0
-		/projects/p1073001a/user/mem/		: p1073001am0
-		/projects/p1073001a/user/dft/		: p1073001ad0
+		/projects/p1073c01/user/pm0/		: p1073c01a0
+		/projects/p1073c01/user/be0/		: p1073c01b0
+		/projects/p1073c01/user/be1/		: p1073c01b1
+		/projects/p1073c01/user/fe0/		: p1073c01f0
+		/projects/p1073c01/user/fe1/		: p1073c01f1
+		/projects/p1073c01/user/ip0/		: p1073c01e0
+		/projects/p1073c01/user/ip1/		: p1073c01e1
+		/projects/p1073c01/user/cad/		: p1073c01c0
+		/projects/p1073c01/user/mem/		: p1073c01m0
  
 
 
@@ -121,7 +119,7 @@ It is composed of the followng modules:
 
 	1. Separate regualr user account and project account
 		regular account - albertli
-		project user account - p1072001aa0
+		project user account - p1073c01a0
 
 		* project design data should be kept in project execution environment under project accounts.
 
@@ -131,7 +129,7 @@ It is composed of the followng modules:
 		* use ~/.rhosts to control which user can login to which project accounts
 	
 		Example: 
-			/projects/p1073001a/users/pm0/.rhosts
+			/projects/p1073c01/users/pm0/.rhosts
 			+ brianli
 			+ kevinwu
 
