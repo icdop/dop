@@ -114,23 +114,23 @@ It is composed of the followng modules:
 			- n13301uf2 : block RTL owner 2
 
 
-## Project Unix Directory 
+## Project Unix Directory
 
- 	- Project Root Directory
+	- Project Root Directory
 	
-		PROJHOME = /project/N13301A
+		PROJ_ROOT = /project/N13301A
 		
 	- Project Central Data Directory 
 	
-		$PROJHOME/techlib/		: n13301uc0
-		$PROJHOME/design/		: n13301ud0
-		$PROJHOME/flow/			: n13301uc?
+		$PROJ_ROOT/techlib/		: n13301uc0
+		$PROJ_ROOT/design/		: n13301ud0
+		$PROJ_ROOT/flow/		: n13301uc0
 
 	- Project User Working Directory 
 	
-		$PROJHOME/users/n13301ua0/	: n13301ua0
-		$PROJHOME/users/n13301ub0/	: n13301ub0
-		$PROJHOME/users/n13301ub1/	: n13301ub1
+		$PROJ_ROOT/users/n13301ua0/	: n13301ua0
+		$PROJ_ROOT/users/n13301ub0/	: n13301ub0
+		$PROJ_ROOT/users/n13301ub1/	: n13301ub1
 		....
  
 ## Project User Account Management
