@@ -1,4 +1,4 @@
-# DQI Utility Command Usage
+# DOP Command Usage
 
 ## Command: <command>
 ### Description: what does this command do?
