@@ -1,67 +1,76 @@
 # DOP - main framework
-Design Operation Platform (dop) is the root projejct of IC Design Management Framework.
+Design Operation Platform (dop) is the root project of IC Design Management Framework.
 
 It is composed of the followng modules:
 
-	* dkm - Design Kit Management
 	* dvc - Design Version Control
+	* dqi - Design Quality Indicator
+	* dcm - Design Collateral Management
 	* dfa - Design Flow Automation
-	* dqr - Design Quality Review
 
 
 ## Project Code Naming Rule
 
-	Format : Pffpppcccr
-
-	* ff - foundry code
+	Format : tfppccr
+        * t - project type
+			P - Platform project
+			R - RLT to GDS
+			N - Netlist to GDS
+			G - GDS tapeout
+			T - Turnkey Production
 	
-			10: TSMC
-			11: UMC
-			12: SMIC
-			13: Samsun
-			14: Global Foundries
+	* f - foundry code
+	
+			1: TSMC
+			2: UMC
+			3: SMIC
+			4: Global Foundries
+			5: Samsung Foundry
+			X: Others
 
 	* pp - process node
 	
-			10: 0.500um	500nm
-			20: 0.350um	250nm
-			30: 0.180um	180nm
-			40: 90nm/80nm
-			50: 65nm/55nm
-				51 -	65G
-				52 -	65LP
-				53 -	55LP
+			05: 0.500um	500nm
+			06: 0.350um	250nm
+			07: 0.180um	180nm
+			08: 80nm
+			09: 90nm
+			10: 65nm/55nm
+				11 -	65G
+				12 -	65LP
+				15 -	55LP
 
-			60: 45nm/40nm
-				61 -	45G
-				62 -	40G
-				63 -	40LP
-				64 -	40ULP
-			70: 32nm/28nm
-				71 -	28LP
-				72 -	28HP
-				73 -	28HPL
-				74 -	28HPM
-				75 -	28HPC
-				76 -	28ULP
-			80: 20nm
-				81 -	20FF
-			90: 16nm
-				91 -	16FF+
-				92 -	16FFC
-				93 -	12FFC
-			A0: 10nm
-				A1 -	10FF
-			B0: 7nm
-				B1 -	7FF
-			C00: 5nm
-			D00: 3nm
+			20: 45nm/40nm
+				21 -	45G
+				25 -	40G
+				26 -	40LP
+				27 -	40ULP
+			30: 32nm/28nm/22nm
+				31 -	28LP
+				32 -	28HP
+				33 -	28HPL
+				34 -	28HPM
+				35 -	28HPC
+				36 -	28ULP
+			40: 20nm
+				41 -	20FF
+				42 -	20FDSOI
+			50: 16nm/14nm/12nm
+				51 -	16FF+
+				52 -	16FFC
+				55 -	12FFC
+			60: 10nm/8nm
+				61 -	10FF
+			70: 7nm
+				71 -	7FF
+			80: 5nm
+			90: 3nm
 
-	* ccc - project count
+	* cc - project count
 	
-			T01: CAD team testchip project
-			I01: internal IP develeopment project
-			C01: customer project
+			T1: CAD team testchip project
+			I1: internal IP develeopment project
+			01: customer project
 
 	* r   - revision
 	
@@ -73,70 +82,82 @@ It is composed of the followng modules:
 ## Project Accont Naming Rule
 
 	Example :
-	Project code - P1073C01A 
+	Project code - N13301A 
 
-	- Project Unix Group
+	- Project User Group
 	
-		- p1073c01a : PM/AE Group 
-		- p1073c01b : Backend Group (APR)
-		- p1073c01c : CAD Group (Library/Design Kit/EDA Tool)
-		- p1073c01d : Design Data Manage Group
-		- p1073c01e : IP Group
-		- p1073c01f : Frontend Group (RTL Coding, Synthesis, Simulation, DFT)
-		- p1073c01m : Memory Group (Memory Compiler)
+		- n13301ua : Project Manager Group 
+		- n13301ub : Backend Group (APR)
+		- n13301uc : CAD Group (Library/Design Kit/EDA Tool/Memory Compiler)
+		- n13301ud : Data Management Group
+		- n13301ue : IP RD Engineering Group
+		- n13301uf : Frontend Group (RTL Coding, Synthesis, Simulation, DFT)
 
-	- Project Unix Account
+	- Project User Account
 	
-		- p1073c01a : Project Data Management Account
-		- p1073c01a0 : Project Leader
-		- p1073c01c0 : CAD/Design Kit Engineer
-		- p1073c01b0 : Backend Leader/Full chip integration
-			- p1073c01b1 : block APR owner 1
-			- p1073c01b2 : block APR owner 2
-		- p1073c01f0 : Frondend Leader
-			- p1073c01f1 : block RTL owern 1 
-			- p1073c01f2 : DFT owner
-		- p1073c01e0 : IP Dev Lead
-			- p1073c01e1 : DDR IP RD
-			- p1073c01e2 : GPIO RD
+		- n13301ua0 : Project Manager
+			- n13301ua1 : FAE 1
+			- n13301ua2 : FAE 2
+		- n13301ub0 : Project Technical Lead (Backend)
+			- n13301ub1 : block APR owner 1
+			- n13301ub2 : block APR owner 2
+		- n13301uc0 : Library/Design Kit Manager
+			- n13301uc1 : CAD flow script owner 1
+			- n13301uc2 : CAD flow script owner 2
+		- n13301ud0 : Design Data Management
+		- n13301ue0 : Project Technincal Lead (IP RD)
+			- u13301ue1 : IP RD owner 1 (DDR)
+			- u13301ue2 : IP RD owner 2 (GPIO)
+		- n13301uf0 : Project Technical Lead (Frontend)
+			- n13301uf1 : block RTL owner 1
+			- n13301uf2 : block RTL owner 2
 
 
-## Project Unix Environment
+## Project Unix Directory 
 
-	- Project Working Directory
+ 	- Project Root Directory
 	
-		/projects/p1073c01/design/		: p1073c01
-		/projects/p1073c01/techlib/		: p1073c01c0
-		/projects/p1073c01/flow/		: p1073c01c0
-		/projects/p1073c01/user/pm0/		: p1073c01a0
-		/projects/p1073c01/user/be0/		: p1073c01b0
-		/projects/p1073c01/user/be1/		: p1073c01b1
-		/projects/p1073c01/user/fe0/		: p1073c01f0
-		/projects/p1073c01/user/fe1/		: p1073c01f1
-		/projects/p1073c01/user/ip0/		: p1073c01e0
-		/projects/p1073c01/user/ip1/		: p1073c01e1
-		/projects/p1073c01/user/cad/		: p1073c01c0
-		/projects/p1073c01/user/mem/		: p1073c01m0
+		PROJHOME = /project/N13301A/
+		
+	- Project Central Data Directory 
+	
+		$PROJHOME/techlib/		: n13301uc0
+		$PROJHOME/design/		: n13301ud0
+		$PROJHOME/flow/			: n13301uc?
+
+	- Project User Working Directory 
+	
+		$PROJHOME/users/n13301ua0/	: n13301ua0
+		$PROJHOME/users/n13301ub0/	: n13301ub0
+		$PROJHOME/users/n13301ub1/	: n13301ub1
+		....
  
-## Project Account Management
+## Project User Account Management
 
-	1. Separate regualr user account and project account
-		regular account - albertli
-		project user account - p1073c01a0
+	1. Separate regualr user account and project user account
+		regular user account - brianli
+		project user account - n13301ua0
 
 		* project design data should be kept in project execution environment under project accounts.
 
+		* Project user account assigmentment table:
 		
+			n13301ua0 : brianli
+			n13301ub0 : kevinwu
+			n13301ub1 : 
+			n13301uc0 : susanho
+			n13301ud0 : 
+	
 	2. Login to regular user account and then rsh/ssh to project account
 
-		* use ~/.rhosts to control which user can login to which project accounts
+		* use $HOME/.rhosts to control which user can login to specific project account
 	
 		Example: 
-			/projects/p1073c01/users/pm0/.rhosts
+			/projects/N13301A/users/n13301ua0/.rhosts
 			+ brianli
 			+ kevinwu
 
-	3. Execute data management & design implementation job from associate project account
+	3. Execute data management & design implementation job from associate project user account
 
 		* all unix job actions should be recorded into tracking database
 		* machine resource and tool license usage should be recorded  
