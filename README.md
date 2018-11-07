@@ -80,7 +80,7 @@ It is composed of the followng modules:
 			C - eco2 
 
 
-## Project Accont Naming Rule
+## Project Account Naming Rule
 
 	Example :
 	Project code - N13301A 
@@ -133,15 +133,15 @@ It is composed of the followng modules:
 		$PRJ_ROOT/users/n13301ub1/	: n13301ub1
 		....
  
-## Project User Account Management
+## Project User Account Usage Model
 
-	1. Separate regualr user account and project user account
+	1. Separate regular user account and project user account
 		regular user account - brianli
 		project user account - n13301ua0
 
 		* project design data should be kept in project execution environment under project accounts.
 
-		* Project user account assigmentment table:
+		* Project user account assignment table:
 		
 			n13301ua0 : albertli
 			n13301ub0 : kevinwu
