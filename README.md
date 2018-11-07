@@ -12,7 +12,8 @@ It is composed of the followng modules:
 ## Project Code Naming Rule
 
 	Format : tfppccr
-        * t - project type
+	
+	* t - project type
 			P - Platform project
 			R - RLT to GDS
 			N - Netlist to GDS
@@ -117,7 +118,7 @@ It is composed of the followng modules:
 
  	- Project Root Directory
 	
-		PROJHOME = /project/N13301A/
+		PROJHOME = /project/N13301A
 		
 	- Project Central Data Directory 
 	
@@ -142,11 +143,11 @@ It is composed of the followng modules:
 
 		* Project user account assigmentment table:
 		
-			n13301ua0 : brianli
+			n13301ua0 : albertli
 			n13301ub0 : kevinwu
-			n13301ub1 : 
+			n13301ub1 : mattwu
 			n13301uc0 : susanho
-			n13301ud0 : 
+			n13301ud0 : brianli
 	
 	2. Login to regular user account and then rsh/ssh to project account
 
@@ -154,8 +155,7 @@ It is composed of the followng modules:
 	
 		Example: 
 			/projects/N13301A/users/n13301ua0/.rhosts
-			+ brianli
-			+ kevinwu
+			+ albertli
 
 	3. Execute data management & design implementation job from associate project user account
 
@@ -164,7 +164,7 @@ It is composed of the followng modules:
 		
 ## Data Management Rule
 
-	1) Only CAD engineer can install the library file into techlib/
-	2) Design data can only be checkin to central database pool with formal DVC command 
+	1) Only FDK kit owner (uc0) can install the library file into techlib/
+	2) Only neccessary design data should be checkin to central database pool and use formal DVC command only
 	3) Design data should be checkout from central pool to local working directory before executing implementation job
 
