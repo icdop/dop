@@ -118,19 +118,19 @@ It is composed of the followng modules:
 
 	- Project Root Directory
 	
-		PROJ_ROOT = /project/N13301A
+		PRJ_ROOT = /project/N13301A
 		
 	- Project Central Data Directory 
 	
-		$PROJ_ROOT/techlib/		: n13301uc0
-		$PROJ_ROOT/design/		: n13301ud0
-		$PROJ_ROOT/flow/		: n13301uc0
+		$PRJ_ROOT/techlib/		: n13301uc0
+		$PRJ_ROOT/design/		: n13301ud0
+		$PRJ_ROOT/flow/		: n13301uc0
 
 	- Project User Working Directory 
 	
-		$PROJ_ROOT/users/n13301ua0/	: n13301ua0
-		$PROJ_ROOT/users/n13301ub0/	: n13301ub0
-		$PROJ_ROOT/users/n13301ub1/	: n13301ub1
+		$PRJ_ROOT/users/n13301ua0/	: n13301ua0
+		$PRJ_ROOT/users/n13301ub0/	: n13301ub0
+		$PRJ_ROOT/users/n13301ub1/	: n13301ub1
 		....
  
 ## Project User Account Management
