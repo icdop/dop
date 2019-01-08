@@ -1,4 +1,4 @@
-MODULES  := dvc dqi dcm dfa 
+MODULES  := dvc dqr dcm dfa 
 
 all: $(MODULES)
 
