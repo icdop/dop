@@ -3,9 +3,9 @@ Design Operation Platform (dop) is the root project of IC Design Management Fram
 
 It is composed of the followng modules:
 
+	* tlp - Technical Library Package
 	* dvc - Design Version Control
-	* dqi - Design Quality Indicator
-	* dcm - Design Collateral Management
+	* dqr - Design Quality Review
 	* dfa - Design Flow Automation
 
 
@@ -32,10 +32,10 @@ It is composed of the followng modules:
 	* pp - process node
 	
 			05: 0.500um	500nm
-			06: 0.350um	250nm
+			06: 0.350um	350nm/250nm
 			07: 0.180um	180nm
-			08: 80nm
-			09: 90nm
+			08: 0.130um     130nm
+			09: 90nm/80nm
 			10: 65nm/55nm
 				11 -	65G
 				12 -	65LP
@@ -62,10 +62,16 @@ It is composed of the followng modules:
 				55 -	12FFC
 			60: 10nm/8nm
 				61 -	10FF
-			70: 7nm
+			70: 7nm/6nm
 				71 -	7FF
-			80: 5nm
-			90: 3nm
+                                75 -    6FF
+			80: 5nm/4nm
+                                81 -    N5P
+				85 -    N4P
+			90: 3nm/2nm
+                                91 -    N3P
+				95 -    N2P
+                        A0: 18A/13A
 
 	* cc - project count
 	
@@ -136,7 +142,7 @@ It is composed of the followng modules:
 ## Project User Account Usage Model
 
 	1. Separate regular user account and project user account
-		regular user account - brianli
+		regular user account - albertli
 		project user account - n13301ua0
 
 		* project design data should be kept in project execution environment under project accounts.
@@ -147,7 +153,7 @@ It is composed of the followng modules:
 			n13301ub0 : kevinwu
 			n13301ub1 : mattwu
 			n13301uc0 : susanho
-			n13301ud0 : brianli
+			n13301ud0 : yorkwu
 	
 	2. Login to regular user account and then rsh/ssh to project account
 
