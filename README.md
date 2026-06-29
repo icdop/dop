@@ -8,8 +8,23 @@ It is composed of the followng modules:
 	* dqr - Design Quality Review
 	* dfa - Design Flow Automation
 
-## Data Management Rule
+	
+## Create Project Unix Directory
+	- Project Root Directory
+		PRJ_ROOT = /project/N13301A
+		
+	- Project Central Data Directory 
+		$PRJ_ROOT/techlib/		: n13301uc0
+		$PRJ_ROOT/design/		: n13301ud0
+		$PRJ_ROOT/flow/		: n13301uc0
 
+	- Project User Working Directory 
+		$PRJ_ROOT/users/n13301ua0/	: n13301ua0
+		$PRJ_ROOT/users/n13301ub0/	: n13301ub0
+		$PRJ_ROOT/users/n13301ub1/	: n13301ub1
+		....
+		
+## Data Management Rule
 	1) Only FDK kit owner (uc0) can install the library file into techlib/
 	2) Only neccessary design data should be checkin to central database pool and use formal DVC command only
 	3) Design data should be checkout from central pool to local working directory before executing implementation job
