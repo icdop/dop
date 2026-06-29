@@ -31,25 +31,6 @@
 			- n13301uf1 : block RTL owner 1
 			- n13301uf2 : block RTL owner 2
 
-
-## Project Unix Directory
-
-	- Project Root Directory
-	
-		PRJ_ROOT = /project/N13301A
-		
-	- Project Central Data Directory 
-	
-		$PRJ_ROOT/techlib/		: n13301uc0
-		$PRJ_ROOT/design/		: n13301ud0
-		$PRJ_ROOT/flow/		: n13301uc0
-
-	- Project User Working Directory 
-	
-		$PRJ_ROOT/users/n13301ua0/	: n13301ua0
-		$PRJ_ROOT/users/n13301ub0/	: n13301ub0
-		$PRJ_ROOT/users/n13301ub1/	: n13301ub1
-		....
  
 ## Project User Account Usage Model
 
