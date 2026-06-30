@@ -3,7 +3,7 @@ Design Operation Platform (dop) is the root project of IC Design Management Fram
 
 It is composed of the followng modules:
 
-	* tlp - Technical Library Package
+	* tlm - Technical Library Management
 	* dvc - Design Version Control
 	* dqr - Design Quality Review
 	* dfa - Design Flow Automation
@@ -34,11 +34,12 @@ It is composed of the followng modules:
 # Flow Ticket file (T400-XXXX.ticket)
 [HEADER]
 TITLE   =  description of the flow ticket
-FLOW_ID =  <i>flow_reference_id</i>:<i>ticket_run_dir</i>
 TECHLIB =  <i>techlib_config_file</i>
+DESIGN  =  <i>top_module_name</i>
 DVC_SRC =  <i>design_source_version_path</i>
 DVC_DST =  <i>design_dest_version_path</i>
-DESIGN  =  <i>top_module_name</i>
+
+FLOW_ID =  <i>flow_reference_id</i>:<i>ticket_run_dir</i>
 
 [INPUT]
 <i>input_ref_id1</i>  = <i>input_file_name</i>
