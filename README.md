@@ -1,7 +1,7 @@
 # DOP - main framework
-Design Operation Platform (dop) is the root project of IC Design Management Framework.
+Design Operation Protocol (dop) is A core technology of IC Design Management Framework.
 
-It is composed of the followng modules:
+It is composed of the followng four systems:
 
 	* tlm - Technical Library Management
 	* dvc - Design Version Control
