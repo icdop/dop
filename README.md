@@ -1,5 +1,5 @@
 # DOP - main framework
-Design Operation Protocol (dop) is A core technology of IC Design Management Framework.
+Design Operation Protocol (dop) is Ticket driven technology of IC Design Management Framework.
 
 It is composed of the followng four systems:
 
